@@ -23,7 +23,7 @@ public class SwaggersConfigs extends WebMvcConfigurerAdapter
     public Docket swaggerConfiguration() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .paths(PathSelectors.ant("/*."))
+                .paths(PathSelectors.ant("/*"))
                 .apis(RequestHandlerSelectors.basePackage("com.example.speakingclock.controller"))
                 .build()
                 .apiInfo(apiInfo());
